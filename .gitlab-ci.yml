@@ -9,8 +9,8 @@ before_script:
 
 variables:
   STAGING_REGISTRY: 'registry.gitlab.com'
-  CONTAINER_IMAGE: ${STAGING_REGISTRY}/BigDataBoutique/${CI_PROJECT_NAME}:commit-${CI_COMMIT_SHA}
-  LATEST_IMAGE: ${STAGING_REGISTRY}/BigDataBoutique/${CI_PROJECT_NAME}:latest
+  CONTAINER_IMAGE: ${STAGING_REGISTRY}/bigdataboutique/${CI_PROJECT_NAME}:commit-${CI_COMMIT_SHA}
+  LATEST_IMAGE: ${STAGING_REGISTRY}/bigdataboutique/${CI_PROJECT_NAME}:latest
 
 build:
   stage: build
@@ -28,7 +28,7 @@ release:
   before_script:
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $STAGING_REGISTRY
   script:
-    - IMAGE_NAME=${STAGING_REGISTRY}/BigDataBoutique/${CI_PROJECT_NAME}:`date '+%Y-%m-%d-%H%M'`-${CI_COMMIT_SHA:0:9}
+    - IMAGE_NAME=${STAGING_REGISTRY}/bigdataboutique/${CI_PROJECT_NAME}:`date '+%Y-%m-%d-%H%M'`-${CI_COMMIT_SHA:0:9}
     - echo $IMAGE_NAME
     - docker pull $CONTAINER_IMAGE
     - docker tag $CONTAINER_IMAGE $IMAGE_NAME

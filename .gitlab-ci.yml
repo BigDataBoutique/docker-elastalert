@@ -16,6 +16,7 @@ build:
   stage: build
   services:
     - name: docker:dind
+      command: ['--experimental']
   script:
     - docker build --squash -t $CONTAINER_IMAGE .
     - docker push $CONTAINER_IMAGE

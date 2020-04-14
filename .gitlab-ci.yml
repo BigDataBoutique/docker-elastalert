@@ -11,6 +11,8 @@ variables:
 
 build:
   stage: build
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $STAGING_REGISTRY
   services:
     - name: docker:dind
       command: ['--experimental']

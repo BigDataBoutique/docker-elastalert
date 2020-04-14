@@ -9,3 +9,5 @@ run_every:
   minutes: 1
 alert_time_limit:
   days: 2
+
+${ELASTALERT_CONFIGS}

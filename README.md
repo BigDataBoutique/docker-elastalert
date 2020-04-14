@@ -1,6 +1,6 @@
 # Dockerized ElastAlert
 
-![https://img.shields.io/docker/v/bigdataboutique/elastalert]  ![https://img.shields.io/docker/pulls/bigdataboutique/elastalert]
+![](https://img.shields.io/docker/v/bigdataboutique/elastalert)  ![](https://img.shields.io/docker/pulls/bigdataboutique/elastalert)
 
 [ElastAlert](https://github.com/Yelp/elastalert) by Yelp is a Python-based utility for enabling alerting for the Elastic Stack. This is an easy-to-use dockerized version of it, with focus on Kubernetes compatibility and flexibility.
 

@@ -1,2 +1,2 @@
 elastalert==0.2.4
-elasticsearch==7.0.5
+elasticsearch>=7.0.0,<8.0.0

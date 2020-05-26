@@ -1,4 +1,7 @@
+#!/bin/sh
 set -e
+
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 mkdir -p /etc/elastalert/
 mkdir -p /etc/elastalert-rules/
@@ -9,4 +12,8 @@ done
 
 cd /etc/elastalert
 elastalert-create-index
-python3 -m elastalert.elastalert --verbose
+if [[ ! -z $TRACE ]]; then
+    touch /app/query.log
+    param="--es_debug_trace /app/query.log"
+fi
+python3 -m elastalert.elastalert --verbose $param

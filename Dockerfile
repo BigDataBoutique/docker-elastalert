@@ -3,7 +3,7 @@ FROM alpine:3.12
 WORKDIR /app
 RUN apk add --update --no-cache git tzdata gettext ca-certificates openssl-dev openssl openssh \
 	libffi-dev gcc musl-dev wget libmagic \
-	python3 python3-dev
+	python3 python3-dev py3-pip
 
 COPY requirements.txt .
 RUN pip3 install --upgrade pip setuptools wheel

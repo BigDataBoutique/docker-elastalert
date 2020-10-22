@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 WORKDIR /app
-RUN apk add --update --no-cache tzdata gettext ca-certificates openssl-dev openssl \
+RUN apk add --update --no-cache git tzdata gettext ca-certificates openssl-dev openssl openssh \
 	libffi-dev gcc musl-dev wget libmagic \
 	python3 python3-dev
 

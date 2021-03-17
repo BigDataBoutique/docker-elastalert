@@ -1,2 +1,2 @@
-git+git://github.com/BigDataBoutique/elastalert.git@75c4fb61e2711f6f32e8#egg=elastalert
-elasticsearch==7.5.1
+git+git://github.com/BigDataBoutique/elastalert.git@master#egg=elastalert
+elasticsearch==7.0.0

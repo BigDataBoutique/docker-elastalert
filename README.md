@@ -67,6 +67,18 @@ kubectl scale deployment/elastalert --replicas=0
 kubectl scale deployment/elastalert --replicas=1
 ```
 
+In order to enable quiet mode set the environment variable `QUIET` flag to `true`, eg
+
+```yaml
+      containers:
+        - name: elastalert
+          image: bigdataboutique/elastalert
+          env:
+            - name: QUIET
+              value: "true"
+```
+
+
 ## Environment Variables
 
 This container setup will do environment variable substitution in all rule files and config.yaml. Some environment variables are already defined and have to be set:

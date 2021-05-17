@@ -12,4 +12,5 @@ COPY . .
 RUN chmod u+x /app/entrypoint.sh
 
 ENV TZ=UTC
-CMD ["sh", "/app/entrypoint.sh"]
+
+ENTRYPOINT ["sh", "/app/entrypoint.sh"]

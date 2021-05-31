@@ -9,5 +9,6 @@ run_every:
   minutes: 1
 alert_time_limit:
   days: 2
-
+old_query_limit :
+  days: 7
 ${ELASTALERT_CONFIGS}

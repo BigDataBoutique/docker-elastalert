@@ -3,12 +3,5 @@ es_port: ${ES_PORT}
 
 rules_folder: /etc/elastalert-rules/
 writeback_index: elastalert-${ENV_NAME}
-buffer_time:
-  minutes: 5
-run_every:
-  minutes: 1
-alert_time_limit:
-  days: 2
-old_query_limit :
-  days: 7
+
 ${ELASTALERT_CONFIGS}

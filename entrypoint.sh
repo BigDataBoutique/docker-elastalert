@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-
 verb="--verbose"
 if [ "$QUIET" = true ]; then
   verb=""
@@ -8,9 +7,12 @@ fi
 
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+
 mkdir -p /etc/elastalert/
 mkdir -p /etc/elastalert-rules/
 envsubst < config.yaml > "/etc/elastalert/config.yaml";
+
+
 for r in rules/*; do
   envsubst < "$r" > "/etc/elastalert-$r";
 done
